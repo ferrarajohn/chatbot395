@@ -1,0 +1,104 @@
+#chatbot {
+    width: 50%;
+    height: 75%;
+    border: 1px solid #000;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+#messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#userInput {
+    border: none;
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+button {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+/* Style for the buttons */
+#clothing-selection button {
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid darkblue; /* Dark blue border */
+    background-color: white; /* White background */
+    padding: 10px 20px; /* Some padding */
+    margin: 5px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    color: darkblue;
+}
+
+/* Style for button hover state */
+#clothing-selection button:hover {
+    background-color: darkblue; /* Dark blue background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Center the clothing-selection div */
+#clothing-selection {
+    text-align: center; /* Center align the buttons */
+}
+
+/* Style for the messages container to ensure it doesn't overlap with centered buttons */
+/* #messages {
+    margin-bottom: 50px; 
+} */
+
+/* Style for each message */
+.msgElement {
+    margin-bottom: 15px; /* Add space below each message */
+    /* Add other styles for the message elements here if needed */
+}
+
+/* You may also want to add padding inside each message for better readability */
+.msgElement {
+    padding: 5px 10px; /* Add padding inside each message */
+    /* Other styles... */
+}
+
+.bot-designation {
+    font-weight: bold;
+    color: red;
+}
+
+.user-designation {
+    font-weight: bold;
+    color: blue;
+}
+
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif 
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.typing-animation {
+    overflow: hidden; /* Ensures the content is clipped to the animation width */
+    border-right: 3px solid orange; /* Simulates the cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+    /* Adjust the number of steps (40 in this case) to match the average length of your messages */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
